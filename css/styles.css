@@ -8,6 +8,7 @@
   --secondary-background-color: #2f303a;
   --other-background-color: #f5f4fa;
   --cards-border: #EEEEEE;
+  --border-color-main: #000000;
 }
 /* Глобальный border-box 
 устанавливается для всех элементов и псевдоэлементов*/
@@ -166,6 +167,17 @@ body {
 /*======MAIN=====*/
 /*Hero*/
 .hero {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+  height: 600px;
+  outline: 1px solid var(--border-color-main);
+  background-image: linear-gradient(transparent, rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4)), 
+  url("../images/heroimg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -183,6 +195,7 @@ body {
   text-align: center;
   color: var(--main-title-color);
 }
+
 .hero-button {
   display: inline-block;
   width: 200px;/* минимальная ширина кнопки, чб избежать переполнения*/
@@ -197,6 +210,8 @@ body {
   cursor: pointer;
   border: transparent;
 }
+
+
 .hero-button:focus,
 .hero-button:hover {
   background-color: var(--accent-button-color);
@@ -225,6 +240,31 @@ body {
 .benefits-item:not(:last-child) {
   margin-right: 30px;
 }
+/* Антена, часы, диаграмма,  Космонавт*/
+.benefits-item::before {
+  margin-bottom: 30px;
+  display: block;
+  content: ''; 
+  height: 120px;
+  /* background-size: contain; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--other-background-color);
+  border-radius: 4px;
+}
+.icon-antena::before {
+  background-image: url(../images/antenna.svg);
+}
+.icon-clock::before {
+  background-image: url(../images/clock.svg);
+}
+.icon-diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
+}
+
 /* сбросила отступы для описаний преимуществ */
 .benefits-item p {
   margin-top: 0;
