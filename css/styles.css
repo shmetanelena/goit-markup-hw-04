@@ -338,7 +338,7 @@ body {
 }
 .employees-list {
   display: flex;
-}
+} 
 .employees-name {
   font-size: 16px;
   font-weight: 500;
