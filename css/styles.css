@@ -201,6 +201,7 @@ body {
   width: 200px;/* минимальная ширина кнопки, чб избежать переполнения*/
   min-height: 50px;
   border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   font-size: 16px;
   font-weight: 700;
   line-height: 1.88;
@@ -320,6 +321,10 @@ body {
 }
 .employees-item {
   background-color: var(--main-title-color);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  ;
 }
 .employees-title {
   /* margin: 0 0 50px 0; */
