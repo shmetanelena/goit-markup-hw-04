@@ -9,6 +9,7 @@
   --other-background-color: #f5f4fa;
   --cards-border: #EEEEEE;
   --border-color-main: #000000;
+  --icon: #afb1b8;
 }
 /* Глобальный border-box 
 устанавливается для всех элементов и псевдоэлементов*/
@@ -324,7 +325,6 @@ body {
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  ;
 }
 .employees-title {
   /* margin: 0 0 50px 0; */
@@ -347,7 +347,7 @@ body {
   color: var(--title-color);
 }
 .employees-position {
-  /* padding-bottom: 30px; */
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -359,6 +359,8 @@ body {
 .employees-img,
 .employees-name {
   text-align: center;
+  /* width: 270px; */
+
 }
 .employees-name {
   margin-bottom: 10px;
@@ -367,6 +369,45 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+/* Социальные сети */
+.social-icon-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-icon-item {
+  margin-right: 10px;
+}
+.social-icon-item:nth-child(4n) {
+  margin-right: 0;
+}
+.social-icon-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.social-icon-link:hover,
+.social-icon-link:focus {
+  background-color: var(--accent-color);
+  fill: var(--main-title-color);
+}
+.icon-social {
+  width: 20px;
+  height: 20px;
+  fill: var(--icon);
+}
+.social-icon-link:hover .icon-social,
+.social-icon-link:focus .icon-social {
+  fill: var(--main-title-color);
+}
+
+
+
+
+
 /*--FOOTER--*/
 .footer {
   padding-top: 60px;
@@ -422,10 +463,7 @@ body {
 
 /*=====РАЗМЕТКА ДЛЯ ПОРТФОЛИО========*/
 /*ККНОПКИ*/
-.portfolio {
-  /* padding-top: 94px;
-  padding-bottom: 94px; */
-}
+
 /* Выровняли в ряд по центру*/
 .portfolio-list {
   display: flex;
@@ -482,6 +520,10 @@ flex-элементов —  в одну строку или в нескольк
   }
 .cards-item:nth-last-child(-n+3) {
   margin-bottom: 0;
+}
+.cards-item:hover {
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 .cards-headline {
   margin-bottom: 4px;
