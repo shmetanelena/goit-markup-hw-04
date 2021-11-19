@@ -147,7 +147,8 @@ body {
 }
 /* хедер - ссылки на маил и телефон */
 .header-contact-link {
-  display: block; 
+  display: flex; 
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   font-size: 14px; 
@@ -164,6 +165,26 @@ body {
 .header-contact-link:hover,
 .header-contact-link:focus {
   color: var(--accent-color);
+}
+.mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: var(--text-color);
+}
+
+.tel {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: var(--text-color);
+}
+.header-contact-link:hover .mail,
+.header-contact-link:focus .mail,
+.header-contact-link:hover .tel,
+.header-contact-link:focus .tel{
+  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 /*======MAIN=====*/
 /*Hero*/
@@ -369,7 +390,7 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-/* Социальные сети */
+/* =====Социальные сети ======*/
 .social-icon-list {
   display: flex;
   justify-content: center;
@@ -404,9 +425,47 @@ body {
   fill: var(--main-title-color);
 }
 
+/* ======ПОСТОЯННЫЕ КЛИЕНТЫ======= */
 
+.clients-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--title-color);
+  
+}
+.clients-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  width: 170px;
+  height: 92px;
+}
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--accent-color);
+}
 
-
+.icon-company {
+  width: 106px;
+  height: 60px;
+  object-fit: fill;
+  fill: var(--icon);
+  
+}
+.clients-link:hover .icon-company,
+.clients-link:focus .icon-company {
+  fill: var(--accent-color);
+}
 
 /*--FOOTER--*/
 .footer {
